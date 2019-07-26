@@ -11,12 +11,11 @@ export default function CharacterList() {
     .get("https://rickandmortyapi.com/api/character/")
     .then (response => {
       setCharacters(response.data.results);
-      console.log(characters);
     })
     .catch(error => console.log(`Uh oh Morty...`, error))
   }, []);
   if (!characters) return <h3>Loading...</h3>;
-
+  console.log("characters: ", characters);
   return (
       
     <Grid relaxed stackable columns={2}>
