@@ -20,7 +20,7 @@ export default function CharacterList(props) {
       
     <Grid relaxed stackable columns={2}>
         {characters.map((character) =>
-            <CharacterCard {...props} key = {character.id} />
+            <CharacterCard {...character} key = {character.id} />
         )}
     </Grid >
 )

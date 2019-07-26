@@ -21,7 +21,7 @@ export default function LocationsList(props) {
         
       <Grid relaxed stackable columns={2}>
           {locations.map((location) =>
-              <LocationCard {...props} key = {location.id} />
+              <LocationCard {...location} key = {location.id} />
           )}
       </Grid >
   )

@@ -20,7 +20,7 @@ export default function EpisodeList(props) {
       
     <Grid relaxed stackable columns={2}>
         {episodes.map((episode) =>
-            <EpisodeCard {...episode} key = {episode.id} name={episode.name} />
+            <EpisodeCard {...episode} key = {episode.id}/>
         )}
     </Grid >
 )
