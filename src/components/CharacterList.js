@@ -20,7 +20,7 @@ export default function CharacterList() {
       
     <Grid relaxed stackable columns={2}>
         {characters.map((character) =>
-            <CharacterCard key = {character.id} name={character.name} species={character.species} status={character.status} location={character.location} origin={character.origin} />
+            <CharacterCard {...character} key = {character.id} name={character.name} species={character.species} status={character.status} location={character.location} origin={character.origin} image={character.image} />
         )}
     </Grid >
 )

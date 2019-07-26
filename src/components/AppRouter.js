@@ -7,9 +7,11 @@ import LocationsList from './LocationsList';
 export default function AppRouter() {
   return <div className="page-view ui bottom attached segment active tab">
     <Switch>
-      <Route path='/characters' component={CharacterList} />
-      <Route path='/locations' component={LocationsList} />
-      <Route component={WelcomePage} />
+      <Route path='/characters' render={props => <CharacterList {...props} /> }/>
+
+      <Route path='/locations' render={props => <LocationsList {...props} />} />
+      <Route path="/" exact 
+        render={props => <WelcomePage {...props} />} />
       {/* <Route path="/episodes" component={} /> */}
     </Switch>
   </div>
