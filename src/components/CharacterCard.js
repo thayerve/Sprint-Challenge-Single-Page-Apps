@@ -9,7 +9,7 @@ export default function CharacterCard (props) {
         <Image src={props.image} />
         <Card.Content>
             <Card.Header>{props.name}</Card.Header>
-            <Card.Meta>{props.species} {props.status} </Card.Meta>
+            <Card.Meta>{props.species}: {props.status} </Card.Meta>
             <Card.Description><div>Location: {props.location.name} </div>
             <div>Origin: {props.origin.name}</div>
               </Card.Description>
