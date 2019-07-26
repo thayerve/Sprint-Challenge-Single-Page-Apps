@@ -3,7 +3,7 @@ import axios from "axios";
 import EpisodeCard from './EpisodeCard';
 import { Grid } from "semantic-ui-react";
 
-export default function EpisodeList() {
+export default function EpisodeList(props) {
   const [episodes, setEpisodes] = useState([]);
 
   useEffect(() => {

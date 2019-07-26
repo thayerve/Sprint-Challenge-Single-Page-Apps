@@ -3,7 +3,7 @@ import axios from "axios";
 import LocationCard from './LocationCard';
 import { Grid } from "semantic-ui-react";
 
-export default function LocationsList() {
+export default function LocationsList(props) {
     const [locations, setLocations] = useState([]);
 
     useEffect(() => {
@@ -21,7 +21,7 @@ export default function LocationsList() {
         
       <Grid relaxed stackable columns={2}>
           {locations.map((location) =>
-              <LocationCard key = {location.id} name={location.name} residents={location.residents.length}  />
+              <LocationCard {...props} key = {location.id} />
           )}
       </Grid >
   )

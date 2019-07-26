@@ -2,16 +2,16 @@ import React from 'react';
 import { Grid, Card, Image } from "semantic-ui-react";
 
 export default function CharacterCard (props) {
-  const { character } = props;
+  
   return (
   <Grid.Column>
       <Card>
-        <Image src="${character.image}" wrapped ui={false} />
+        <Image src={props.image} />
         <Card.Content>
-            <Card.Header>{character.name}</Card.Header>
-            <Card.Meta>{character.species} {character.status} </Card.Meta>
-            <Card.Description>Location: {character.location} 
-              Origin: {character.origin}
+            <Card.Header>{props.name}</Card.Header>
+            <Card.Meta>{props.species} {props.status} </Card.Meta>
+            <Card.Description>Location: {props.location} 
+              Origin: {props.origin}
               </Card.Description>
         </Card.Content>
       </Card>

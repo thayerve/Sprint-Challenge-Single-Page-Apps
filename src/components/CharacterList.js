@@ -3,7 +3,7 @@ import axios from "axios";
 import CharacterCard from './CharacterCard';
 import { Grid } from "semantic-ui-react";
 
-export default function CharacterList() {
+export default function CharacterList(props) {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
@@ -13,14 +13,14 @@ export default function CharacterList() {
       setCharacters(response.data.results);
     })
     .catch(error => console.log(`Uh oh Morty...`, error))
-  }, []);
+  }, [characters]);
   if (!characters) return <h3>Loading...</h3>;
   console.log("characters: ", characters);
   return (
       
     <Grid relaxed stackable columns={2}>
         {characters.map((character) =>
-            <CharacterCard {...character} key = {character.id} name={character.name} species={character.species} status={character.status} location={character.location} origin={character.origin} image={character.image} />
+            <CharacterCard {...props} key = {character.id} />
         )}
     </Grid >
 )
